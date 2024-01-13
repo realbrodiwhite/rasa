@@ -192,7 +192,7 @@ jobs:
         if: needs.docker.result != 'success' || needs.deploy.result != 'success'
         env:
           SLACK_WEBHOOK: ${{ secrets.SLACK_RELEASE_ASSISTANT_ATOM_ALERTS_WEBHOOK }}
-        uses: Ilshidur/action-slack@689ad44a9c9092315abd286d0e3a9a74d31ab78a
+        uses: Ilshidur/action-slack@b873c507a5419feb679750409eea157892053369
         with:
           args: "⛔️ *Rasa nightly release* failed 😱! Please check out GitHub Actions: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
 
